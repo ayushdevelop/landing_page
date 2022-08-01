@@ -9,11 +9,12 @@ const Navigation = () => {
       }
     }
   `);
+
   const logoTitle = data.strapiComponentLogoLogo.Logo_title;
 
   return (
-    <div className="max-w-7xl bg-white h-5 p-6 m-auto flex justify-items-center">
-      <div className="flex-auto text-2xl">{logoTitle}</div>
+    <div className="max-w-7xl bg-white h-5 p-6 m-auto flex items-center">
+      <div className="ml-20 mt-10 text-2xl text-gray-500">{logoTitle}</div>
     </div>
   );
 };
