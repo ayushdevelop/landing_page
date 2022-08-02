@@ -20,6 +20,7 @@ const strapiConfig = {
           },
           content: {
             populate: {
+              client_logo: "*",
               tools: "*",
               tools: {
                 populate: {

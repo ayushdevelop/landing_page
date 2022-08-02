@@ -1,8 +1,6 @@
 import React from "react";
 
-
-
-const Navigation = ({logoTitle}) => {
+const Navigation = ({logoTitle, logo_image}) => {
 
 return (
     <div className="max-w-7xl bg-white h-5 p-6 m-auto flex items-center">

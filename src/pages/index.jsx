@@ -2,41 +2,68 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Navigation from "./components/Navigation";
 
-// markup
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
+  const queryData = useStaticQuery(graphql`
   query {
-    strapiPage {
-      content {
-        requirements {
-          data {
-            requirements
+    allStrapiPage {
+      nodes {
+        banner_image {
+          banner_image {
+            url
+            localFile {
+              url
+            }
+          }
+          caption
+        }
+        content {
+          client
+          tools {
+            nameoftool
+            logo {
+              localFile {
+                url
+              }
+            }
+          }
+          description {
+            data {
+              description
+            }
+          }
+          requirements {
+            data {
+              requirements
+            }
+          }
+          client_logo {
+            localFile {
+              url
+            }
           }
         }
-        description {
-          data {
-            description
+        navbar {
+          logo_title
+          logo_image {
+            localFile {
+              url
+            }
           }
         }
-        client
-      }
-      navbar {
-        logo_title
-      }
-      banner_image {
-        caption
       }
     }
   }
 `);
 
-const pageTitle = data.strapiPage.banner_image.caption;
-const logoTitle = data.strapiPage.navbar.logo_title;
-const content = data.strapiPage.content;
+const [data] = queryData.allStrapiPage.nodes
+const {banner} = data.banner_image;
+const {navBarContent} = data.navbar;
+const content = data.content;
+
   return (
     <main>
       <title>Portfolio</title>
-      <Navigation logoTitle={logoTitle}/>
+      <Navigation navBarContent={navBarContent}/>
     </main>
   );
 };
