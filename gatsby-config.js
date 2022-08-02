@@ -7,6 +7,22 @@ const strapiConfig = {
   accessToken: process.env.STRAPI_TOKEN,
   collectionTypes: ["page"],
   singleTypes: [],
+  queryParams: {
+    populate: {
+      logo_image: "*",
+      banner_image: "*",
+      content: {
+        populate: {
+          client_logo: "*",
+          tools: {
+            populate: {
+              nameoftool: "*",
+            },
+          },
+        },
+      },
+    },
+  },
 };
 
 module.exports = {
@@ -18,6 +34,7 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
