@@ -3,14 +3,15 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const Navigation = () => {
   const data = useStaticQuery(graphql`
-    query {
-      strapiComponentLogoLogo {
-        Logo_title
-      }
-    }
-  `);
+   query {
+     strapiComponentLogoLogo {
+       logo_title
+     }
+   }
+ `);
+ console.log(data);
 
-  const logoTitle = data.strapiComponentLogoLogo.Logo_title;
+const logoTitle = data.strapiComponentLogoLogo.logo_title;
 
   return (
     <div className="max-w-7xl bg-white h-5 p-6 m-auto flex items-center">

@@ -19,6 +19,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `pages`,
+        path: `${__dirname}/gatsby-config.js`,
+      },
+    },
     {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
