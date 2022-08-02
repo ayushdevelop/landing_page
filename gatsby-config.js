@@ -5,31 +5,7 @@ require("dotenv").config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: [
-    {
-      singularName: "page",
-      queryParams: {
-        populate: {
-          navbar: {
-            populate: { logo_image: "*" },
-          },
-          banner_image: {
-            populate: {
-              banner_image: "*",
-            },
-          },
-          content: {
-            populate: {
-              tools: "*",
-              tools: {
-                populate: { logo: "*" },
-              },
-            },
-          },
-        },
-      },
-    },
-  ],
+  collectionTypes: ["page"],
   singleTypes: [],
 };
 
@@ -45,7 +21,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
