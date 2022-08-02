@@ -56,9 +56,10 @@ const IndexPage = () => {
 `);
 
 const [data] = queryData.allStrapiPage.nodes
-const {banner} = data.banner_image;
-const {navBarContent} = data.navbar;
+const banner = data.banner_image;
+const navBarContent = data.navbar;
 const content = data.content;
+
 
   return (
     <main>
