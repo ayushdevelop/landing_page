@@ -9,7 +9,7 @@ const Navigation = () => {
      }
    }
  `);
- console.log(data);
+ 
 
 const logoTitle = data.strapiComponentLogoLogo.logo_title;
 
