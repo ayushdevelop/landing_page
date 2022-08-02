@@ -24,13 +24,13 @@ const IndexPage = () => {
         logo_title
       }
       banner_image {
-        Caption
+        caption
       }
     }
   }
 `);
 
-const pageTitle = data.strapiPage.banner_image.Caption;
+const pageTitle = data.strapiPage.banner_image.caption;
 const logoTitle = data.strapiPage.navbar.logo_title;
 const content = data.strapiPage.content;
   return (
