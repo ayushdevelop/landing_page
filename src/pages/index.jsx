@@ -24,7 +24,6 @@ const IndexPage = () => {
               nameoftool
               logo {
                 localFile {
-                  id
                   url
                 }
               }

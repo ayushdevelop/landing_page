@@ -7,7 +7,7 @@ import Description from "./Project Details Component/Description";
 
 const Project = ({ projectDetails, portfolio }) => {
   return (
-    <div className="max-w-2xl m-auto mt-24">
+    <div className="max-w-2xl m-auto mt-20">
       <h2 className="text-center text-bold text-3xl text-gray-600">
         {portfolio}
       </h2>
