@@ -6,9 +6,9 @@ const Navigation = ({ navBarContent }) => {
   const src = imgSrc.localFile.url;
 
   return (
-    <div className="max-w-7xl bg-white h-5 p-6 m-auto mb-12 flex items-center">
-      <img src={src} className="ml-20 mt-10 w-10 h-10" alt="company logo"/>
-      <div className="ml-2 mt-10 text-2xl text-gray-500">{logo_title}</div>
+    <div className="max-w-6xl h-5 m-auto p-12 flex flex-col md:flex-row md:justify-start items-center md:items-center">
+      <img src={src} className="m-2 w-10 h-10" alt="company logo"/>
+      <div className="m-2 text-2xl text-gray-500">{logo_title}</div>
     </div>
   );
 };
