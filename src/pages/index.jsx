@@ -1,8 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Navigation from "./components/Navigation";
-import Banner from "./components/Banner";
-import Project from "./components/Projects";
+import Navigation from "../components/Navigation";
+import Banner from "../components/Banner";
+import Project from "../components/Projects";
 
 const IndexPage = () => {
   const queryData = useStaticQuery(graphql`
@@ -24,6 +24,7 @@ const IndexPage = () => {
               nameoftool
               logo {
                 localFile {
+                  id
                   url
                 }
               }
