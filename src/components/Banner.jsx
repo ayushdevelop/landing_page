@@ -5,7 +5,7 @@ const Banner = ({ bannerImage }) => {
   const imgSrc = banner_image.localFile.url;
 
   return (
-    <div>
+    <div className="mt-24 sm:mt-0">
       <div
         className="max-w-full h-64 bg-center bg-cover bg-fixed"
         style={{ backgroundImage: `url(${imgSrc})` }}
